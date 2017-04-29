@@ -173,11 +173,19 @@ abstract class AbstractBuilder
         }
 
         foreach ($this->getParameters() as $key => $val) {
-            $val = urlencode($val);
             // Check if is an array
             if (is_array($val)) {
-                $url .= '&' . $key . '=' . implode('|', $val);
+                $url .= '&' . $key . '=' . urlencode(implode('|', $val));
+                /*foreach ($val as $i => $v) {
+                    $v = urlencode($v);
+                    if($i == 0) {
+                        $url .= $v;
+                    } else {
+                        $url .= '|' . $v;
+                    }
+                }*/
             } else {
+                $val = urlencode($val);
                 $url .= '&' . $key . '=' . $val;
             }
         }
