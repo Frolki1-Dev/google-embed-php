@@ -1,0 +1,30 @@
+{
+    "name": "frolki1_dev/google-embed-php",
+    "description": "Use the Embed API of Google Maps with PHP",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "^6.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Frank Giger",
+            "email": "mail@frank-giger.ch",
+            "homepage": "https://frank-giger.ch"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Frolki1_Dev\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Frolki1_Dev\\Google\\Embed\\Tests\\": "tests/"
+        }
+    }
+}
