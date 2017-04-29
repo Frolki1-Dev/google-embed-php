@@ -90,4 +90,20 @@ class AbstractBuilderTest extends TypeTestCase
 
         $this->assertEquals('satellite', $place->getParameter('maptype'));
     }
+
+    public function testLanguageParameter()
+    {
+        $place = $this->googleMaps->createPlaceMap();
+
+        $place->setLanguage('de');
+
+        $this->assertEquals('de', $place->getParameter('language'));
+    }
+
+    public function testIFrame()
+    {
+        $place = $this->googleMaps->createPlaceMap();
+
+        $this->assertStringStartsWith('<iframe', $place->setLocation($this->location)->getIFrame(250, 250));
+    }
 }
