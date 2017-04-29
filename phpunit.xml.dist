@@ -19,4 +19,7 @@
     <logging>
         <log type="coverage-clover" target="clover.xml"/>
     </logging>
+    <php>
+        <env name="API_KEY" value="AIzaSyD30XDxNzxn8dIU4fq4wK48c7pX9VF3uLs"/>
+    </php>
 </phpunit>
